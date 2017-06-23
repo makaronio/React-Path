@@ -1,5 +1,13 @@
 
+const App = () => {
+    return(
+        <div>
+            <PlayNine/>
+        </div>
+    );
+};
+
 ReactDOM.render(
-    <i className="fa fa-star" aria-hidden="true"></i>,
+    <App/>,
     document.getElementById('root')
 );
