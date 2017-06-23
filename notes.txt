@@ -5,3 +5,5 @@
 3. setState method is an asynchronous, which just schedules an update (might hit a race condition)
 4. The place where you defined state is an important question
 5. spread operator
+6. ref={} get reference to this element. Called when elemented will be mounted to the DOM
+7. controlled components
