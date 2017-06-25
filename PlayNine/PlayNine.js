@@ -201,7 +201,7 @@ class PlayNine extends React.Component {
                 return {doneStatus: 'Great job!'}
             }
             //if (prevState.redrawCount === 0 && !this.possibleSolutions(prevState)) {
-            if (!this.possibleSolutions(prevState)) {
+            if (prevState.redrawCount === 0 && !this.possibleSolutions(prevState)) {
                 return {doneStatus: 'Game over!'}
             }
         });
@@ -248,7 +248,7 @@ class PlayNine extends React.Component {
                 </div>
                 <br/>
                 {doneStatus
-                    ? <DoneStatus doneStatus={doneStatus} restart={this.resetGame}/>
+                    ? <DoneStatus doneStatus={doneStatus} resetGame={this.resetGame}/>
                     : <Numbers selectedNumbers={selectedNumbers}
                              usedNumbers={usedNumbers}
                              selectNumberHandler={this.selectNumberHandler}/>
